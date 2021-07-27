@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <img src="images/logo.svg" alt="splitter logo" class="logo">
+</header>
+
+<div class="main">
+
+  <div class="left">
+    <span class="text_gray">Bill</span>
+    <div class="bill_container">
+      <img src="images/icon-dollar.svg">
+      <input class="bill_value" type="number" placeholder="0"/>
+    </div>
+    <span class="text_gray">Select Tip %</span>
+    <div class="buttons">
+      <button class="active">5%</button>
+      <button>10%</button>
+      <button>15%</button>
+      <button>25%</button>
+      <button>50%</button>
+      <input class="custom" type="number" placeholder="Custom"/>
+    </div>
+    <span class="text_gray">Number of People</span>
+    <div class="nr_people_container">
+      <img src="images/icon-person.svg">
+      <input class="nr_people" type="number" placeholder="0"/>
+    </div>
+
+  </div>
+
+  <div class="right">
+    <div class="right_element">
+      <div class="right_text">
+        <span class="right_text_big">Tip Amount</span>
+        <span class="right_text_little">/ person</span>
+      </div>
+      <div class="value">$0</div>
+    </div>
+    <div class="right_element">
+      <div class="right_text">
+        <span class="right_text_big">Total</span>
+        <span class="right_text_little">/ person</span>
+      </div>
+      <div class="value">$0</div>
+    </div>
+    <button class="active reset">Reset</button>
+  </div>
+
+</div>
+
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>
+    Coded by <a href="https://github.com/iulian-cenusa"> Iulian Cenuşă</a>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap');
+
+/*Body style*/
+body{
+  background-color: hsl(185, 41%, 84%);
+  font-family: 'Space Mono', monospace;
+  size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Header*/
+header{
+  justify-content: center;
+  display: flex;
+}
+
+/*Main content*/
+.main{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 25px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+}
+
+.left{
+  background-color: hsl(0, 0%, 100%);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+}
+
+.right{
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  align-items: center;
+}
+
+.bill_container{
+  margin: 0;
+  background-color: hsl(189, 41%, 97%);
+}
+
+.nr_people_container{
+  margin: 0;
+  background-color: hsl(189, 41%, 97%);
+}
+
+.text_gray{
+  font-weight: 700;
+  color: hsl(184, 14%, 56%);
+  text-align: left;
+}
+
+.right_element{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.right_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.value{
+  text-align: right;
+  justify-content: right;
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+  margin-right: 20px;
+}
+
+.right_text_big{
+  margin-left: 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+}
+
+.right_text_little{
+  margin-left: 20px;
+  color: hsl(184, 14%, 56%);
+  font-size: 14px;
+}
+
+/*Inputs*/
+input {
+  font-family: Space Mono, monospace;
+  font-weight: 700;
+  font-size: 24px;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  padding-right: 10px;
+}
+
+.custom{
+  width: 100px;
+  height:50px;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 20px;
+}
+
+/*Buttons*/
+button {
+  font-family: Space Mono, monospace;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  width: 100px;
+  height:50px;
+}
+
+.buttons{
+  display: grid;
+  grid-gap: 20px;
+}
+
+.active{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.reset{
+  margin: 75px 0 20px 0;
+  width: 300px;
+}
+
+/*Images (SVGs)*/
+img{
+  margin-left: 20px;
+}
+
+@media (min-width: 375px) { 
+  .main{
+    flex-direction: column;
+    width: 375px;
+  }
+  .buttons{
+    grid-template-columns: 100px 100px;
+  }
+
+}
+
+@media (min-width: 1440px) { 
+  .main{
+    flex-direction: row;
+    width: 775px;
+  }
+
+  .buttons{
+    grid-template-columns: 100px 100px 100px;
+  }
+
+}
