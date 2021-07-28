@@ -137,7 +137,9 @@ button {
   color: hsl(183, 100%, 15%);
 }
 
-.reset{
+#reset{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
   margin: 75px 0 20px 0;
   width: 300px;
 }
