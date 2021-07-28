@@ -26,12 +26,20 @@
 <div class="main">
 
   <div class="left">
-    <span class="text_gray">Bill</span>
+
+    <div class="text_container">
+      <span class="text_gray">Bill</span>
+    </div>
+
     <div class="bill_container">
       <img src="images/icon-dollar.svg">
       <input id="bill_input" type="number" placeholder="0"/>
     </div>
-    <span class="text_gray">Select Tip %</span>
+
+    <div class="text_container">
+      <span class="text_gray">Select Tip %</span>
+    </div>
+
     <div class="buttons">
       <button id="fivePercent">5%</button>
       <button  id="tenPercent">10%</button>
@@ -40,7 +48,12 @@
       <button  id="fiftyPercent">50%</button>
       <input id="custom_input" class="custom" type="number" placeholder="Custom"/>
     </div>
-    <span class="text_gray">Number of People</span>
+
+    <div class="text_container space">
+      <span class="text_gray">Number of People</span>
+      <span id="zero">Can't be zero</span>
+    </div>
+    
     <div class="nr_people_container">
       <img src="images/icon-person.svg">
       <input id="nr_people_input" class="nr_people" type="number" placeholder="0"/>

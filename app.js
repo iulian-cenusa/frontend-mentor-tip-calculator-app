@@ -20,6 +20,10 @@ let twentyfivePercent = document.querySelector('#twentyfivePercent')
 let fiftyPercent = document.querySelector('#fiftyPercent')
 let resetButton = document.querySelector('#reset')
 
+// zero text 
+let zero = document.querySelector('#zero')
+let zeroBorder = document.querySelector('.nr_people_container')
+
 // buttons events
 fivePercent.addEventListener('click',()=>{
     fivePercent.classList.add('active')
@@ -116,6 +120,12 @@ bill_input.addEventListener('input', ()=>{
 
 custom_input.addEventListener('input', ()=>{
 
+    fivePercent.classList.remove('active')
+    tenPercent.classList.remove('active')
+    fifteenPercent.classList.remove('active')
+    twentyfivePercent.classList.remove('active')
+    fiftyPercent.classList.remove('active')
+
     nrPeople = parseInt(nr_people_input.value)
     tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
     billAmount = parseFloat(bill_input.value).toFixed(2)
@@ -124,16 +134,22 @@ custom_input.addEventListener('input', ()=>{
 })
 
 nr_people_input.addEventListener('input', ()=>{
-    if ( nr_people_input.value < 0 ){
-        window.alert('Number of people cannot be negative')
+    if ( nr_people_input.value < 1 ){
+        zero.style.display = 'flex'
+        zeroBorder.style.border = '2px solid red'
         nr_people_input.value = 0
     }
+    else{
+        zero.style.display = 'none'
+        zeroBorder.style.border = '0px solid red'
 
-    nrPeople = parseInt(nr_people_input.value)
-    tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
-    billAmount = parseFloat(bill_input.value).toFixed(2)
+        nrPeople = parseInt(nr_people_input.value)
+        tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
+        billAmount = parseFloat(bill_input.value).toFixed(2)
+    
+        calculate()
 
-    calculate()
+    }
 })
 
 
