@@ -31,13 +31,13 @@ fivePercent.addEventListener('click',()=>{
     fifteenPercent.classList.remove('active')
     twentyfivePercent.classList.remove('active')
     fiftyPercent.classList.remove('active')
-
-    nrPeople = parseInt(nr_people_input.value)
-    tipAmount = (billAmount * (5/100)).toFixed(2)
-    billAmount = parseFloat(bill_input.value).toFixed(2)
-    
-    calculate()
-
+    if ( bill_input.value > 0 && nr_people_input.value > 0 ){
+        nrPeople = parseInt(nr_people_input.value)
+        tipAmount = (billAmount * (5/100)).toFixed(2)
+        billAmount = parseFloat(bill_input.value).toFixed(2)
+        
+        calculate()
+    }
 })
 
 tenPercent.addEventListener('click',()=>{
@@ -46,12 +46,13 @@ tenPercent.addEventListener('click',()=>{
     fifteenPercent.classList.remove('active')
     twentyfivePercent.classList.remove('active')
     fiftyPercent.classList.remove('active')
-
-    nrPeople = parseInt(nr_people_input.value)
-    tipAmount = (billAmount * (10/100)).toFixed(2)
-    billAmount = parseFloat(bill_input.value).toFixed(2)
-    
-    calculate()
+    if ( bill_input.value > 0 && nr_people_input.value > 0 ){
+        nrPeople = parseInt(nr_people_input.value)
+        tipAmount = (billAmount * (10/100)).toFixed(2)
+        billAmount = parseFloat(bill_input.value).toFixed(2)
+        
+        calculate()
+    }
 })
 
 fifteenPercent.addEventListener('click',()=>{
@@ -60,12 +61,13 @@ fifteenPercent.addEventListener('click',()=>{
     fifteenPercent.classList.add('active')
     twentyfivePercent.classList.remove('active')
     fiftyPercent.classList.remove('active')
-
-    nrPeople = parseInt(nr_people_input.value)
-    tipAmount = (billAmount * (15/100)).toFixed(2)
-    billAmount = parseFloat(bill_input.value).toFixed(2)
-    
-    calculate()
+    if ( bill_input.value > 0 && nr_people_input.value > 0 ){
+        nrPeople = parseInt(nr_people_input.value)
+        tipAmount = (billAmount * (15/100)).toFixed(2)
+        billAmount = parseFloat(bill_input.value).toFixed(2)
+        
+        calculate()
+    }
 })
 
 twentyfivePercent.addEventListener('click',()=>{
@@ -74,12 +76,13 @@ twentyfivePercent.addEventListener('click',()=>{
     fifteenPercent.classList.remove('active')
     twentyfivePercent.classList.add('active')
     fiftyPercent.classList.remove('active')
-
-    nrPeople = parseInt(nr_people_input.value)
-    tipAmount = (billAmount * (25/100)).toFixed(2)
-    billAmount = parseFloat(bill_input.value).toFixed(2)
-    
-    calculate()
+    if ( bill_input.value > 0 && nr_people_input.value > 0 ){
+        nrPeople = parseInt(nr_people_input.value)
+        tipAmount = (billAmount * (25/100)).toFixed(2)
+        billAmount = parseFloat(bill_input.value).toFixed(2)
+        
+        calculate()  
+    }
 })
 
 fiftyPercent.addEventListener('click',()=>{
@@ -88,15 +91,21 @@ fiftyPercent.addEventListener('click',()=>{
     fifteenPercent.classList.remove('active')
     twentyfivePercent.classList.remove('active')
     fiftyPercent.classList.add('active')
-
-    nrPeople = parseInt(nr_people_input.value)
-    tipAmount = (billAmount * (50/100)).toFixed(2)
-    billAmount = parseFloat(bill_input.value).toFixed(2)
-    
-    calculate()
+    if ( bill_input.value > 0 && nr_people_input.value > 0 ){
+        nrPeople = parseInt(nr_people_input.value)
+        tipAmount = (billAmount * (50/100)).toFixed(2)
+        billAmount = parseFloat(bill_input.value).toFixed(2)
+        
+        calculate()
+    }
 })
 
 resetButton.addEventListener('click',()=>{
+    fivePercent.classList.remove('active')
+    tenPercent.classList.remove('active')
+    fifteenPercent.classList.remove('active')
+    twentyfivePercent.classList.remove('active')
+    fiftyPercent.classList.remove('active')
     bill_input.value = 0
     nr_people_input.value = 0
     custom_input.value = 'Custom'
@@ -110,12 +119,14 @@ bill_input.addEventListener('input', ()=>{
         window.alert('Bill value cannot be negative')
         bill_input.value = 0
     }
-
-    nrPeople = parseInt(nr_people_input.value)
-    tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
-    billAmount = parseFloat(bill_input.value).toFixed(2)
-    
-    calculate()
+    else{
+        if ( nr_people_input.value > 0 ){
+            nrPeople = parseInt(nr_people_input.value)
+            tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
+            billAmount = parseFloat(bill_input.value).toFixed(2)
+            calculate()
+        }
+    }
 })
 
 custom_input.addEventListener('input', ()=>{
@@ -125,12 +136,13 @@ custom_input.addEventListener('input', ()=>{
     fifteenPercent.classList.remove('active')
     twentyfivePercent.classList.remove('active')
     fiftyPercent.classList.remove('active')
-
-    nrPeople = parseInt(nr_people_input.value)
-    tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
-    billAmount = parseFloat(bill_input.value).toFixed(2)
-
-    calculate()
+    if ( bill_input.value > 0 && nr_people_input.value > 0 ){
+        nrPeople = parseInt(nr_people_input.value)
+        tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
+        billAmount = parseFloat(bill_input.value).toFixed(2)
+    
+        calculate()
+    }
 })
 
 nr_people_input.addEventListener('input', ()=>{
@@ -142,17 +154,15 @@ nr_people_input.addEventListener('input', ()=>{
     else{
         zero.style.display = 'none'
         zeroBorder.style.border = '0px solid red'
-
-        nrPeople = parseInt(nr_people_input.value)
-        tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
-        billAmount = parseFloat(bill_input.value).toFixed(2)
-    
-        calculate()
-
+        if ( bill_input.value > 0 ){
+            nrPeople = parseInt(nr_people_input.value)
+            tipAmount = (billAmount * (custom_input.value/100)).toFixed(2)
+            billAmount = parseFloat(bill_input.value).toFixed(2)
+        
+            calculate()
+        }
     }
 })
-
-
 
 // functions 
 function calculate(){
