@@ -1,94 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-
-<header>
-  <img src="images/logo.svg" alt="splitter logo" class="logo">
-</header>
-
-<div class="main">
-
-  <div class="left">
-
-    <div class="text_container">
-      <span class="text_gray">Bill</span>
-    </div>
-
-    <div class="bill_container">
-      <img src="images/icon-dollar.svg">
-      <input id="bill_input" type="number" placeholder="0"/>
-    </div>
-
-    <div class="text_container">
-      <span class="text_gray">Select Tip %</span>
-    </div>
-
-    <div class="buttons">
-      <button id="fivePercent">5%</button>
-      <button  id="tenPercent">10%</button>
-      <button  id="fifteenPercent">15%</button>
-      <button  id="twentyfivePercent">25%</button>
-      <button  id="fiftyPercent">50%</button>
-      <input id="custom_input" class="custom" type="number" placeholder="Custom"/>
-    </div>
-
-    <div class="text_container space">
-      <span class="text_gray">Number of People</span>
-      <span id="zero">Can't be zero</span>
-    </div>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     
-    <div class="nr_people_container">
-      <img src="images/icon-person.svg">
-      <input id="nr_people_input" class="nr_people" type="number" placeholder="0"/>
-    </div>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  </div>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
 
-  <div class="right">
-    <div class="right_element">
-      <div class="right_text">
-        <span class="right_text_big">Tip Amount</span>
-        <span class="right_text_little">/ person</span>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+    <header>
+      <img src="images/logo.svg" alt="splitter-logo" class="logo">
+    </header>
+
+    <div class="main">
+
+      <div class="left">
+
+        <div class="text_container">
+          <span class="text_gray">Bill</span>
+        </div>
+
+        <div class="bill_container">
+          <img src="images/icon-dollar.svg" alt="icon-dollar">
+          <input id="bill_input" type="number" placeholder="0"/>
+        </div>
+
+        <div class="text_container">
+          <span class="text_gray">Select Tip %</span>
+        </div>
+
+        <div class="buttons">
+          <button id="fivePercent">5%</button>
+          <button  id="tenPercent">10%</button>
+          <button  id="fifteenPercent">15%</button>
+          <button  id="twentyfivePercent">25%</button>
+          <button  id="fiftyPercent">50%</button>
+          <input id="custom_input" class="custom" type="number" placeholder="Custom"/>
+        </div>
+
+        <div class="text_container space">
+          <span class="text_gray">Number of People</span>
+          <span id="zero">Can't be zero</span>
+        </div>
+        
+        <div class="nr_people_container">
+          <img src="images/icon-person.svg" alt="icon-person">
+          <input id="nr_people_input" class="nr_people" type="number" placeholder="0"/>
+        </div>
+
       </div>
-      <div id="tip" class="value">$0</div>
-    </div>
-    <div class="right_element">
-      <div class="right_text">
-        <span class="right_text_big">Total</span>
-        <span class="right_text_little">/ person</span>
+
+      <div class="right">
+        <div class="right_element">
+          <div class="right_text">
+            <span class="right_text_big">Tip Amount</span>
+            <span class="right_text_little">/ person</span>
+          </div>
+          <div id="tip" class="value">$0</div>
+        </div>
+        <div class="right_element">
+          <div class="right_text">
+            <span class="right_text_big">Total</span>
+            <span class="right_text_little">/ person</span>
+          </div>
+          <div id="total" class="value">$0</div>
+        </div>
+        <button id="reset">Reset</button>
       </div>
-      <div id="total" class="value">$0</div>
+
     </div>
-    <button id="reset">Reset</button>
-  </div>
 
-</div>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>
+        Coded by <a href="https://github.com/iulian-cenusa"> Iulian Cenuşă</a>
+      </div>
+    </footer>
 
-<footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>
-    Coded by <a href="https://github.com/iulian-cenusa"> Iulian Cenuşă</a>
-  </div>
-</footer>
-
-<script src="app.js"></script>
-
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
